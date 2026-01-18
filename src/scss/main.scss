@@ -13,39 +13,54 @@ video {
   display: block;
 }
 
-button {
+body {
+  display: flex;
+  padding: 50px 50px;
+  align-items: center;
+}
+
+.button {
   display: flex;
   padding: 10px 20px;
   align-items: center;
   gap: 10px;
   border-radius: 19px;
   border: 2px solid #f00;
-  background: none;
-}
-
-h2 {
   color: #f00;
-  font-family: "Font Awesome 6 Free";
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 18px; /* 100% */
 }
-
-h1 {
-  color: #f00;
+.button h1 {
   font-family: Roboto;
   font-size: 18px;
   font-style: normal;
   font-weight: 600;
   line-height: 18px;
 }
-
-p {
+.button p {
   color: #000;
   font-family: Roboto;
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
   line-height: 18px;
+}
+.button.liked {
+  background-color: #f00;
+  color: #fff;
+}
+.button.liked h1,
+.like-button.liked p {
+  color: #fff;
+}
+.button.liked p {
+  color: transparent;
+  position: relative;
+  display: inline-block;
+}
+.button.liked p::after {
+  content: "148";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #fff;
+  pointer-events: none;
 }
